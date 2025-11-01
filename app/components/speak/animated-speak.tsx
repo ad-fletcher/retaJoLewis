@@ -75,8 +75,8 @@ export const AnimatedSpeaking = ({
           backgroundSize: '40px 40px'
         }}
       />
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">See Reta Speak</h2>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-20">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 md:mb-16">See Reta Speak</h2>
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20">
         <div>
           <div className="relative h-80 w-full">
             <AnimatePresence>
@@ -182,7 +182,7 @@ export const AnimatedSpeaking = ({
                 </motion.span>
               ))}
             </motion.p>
-            <div className="mt-2 flex items-center gap-4">
+            <div className="mt-2 flex flex-col md:flex-row items-center gap-4">
               <a href={testimonials[active].videoUrl} target="_blank" rel="noopener noreferrer" className="inline-block">
                 <PhysicsButton 
                   text="Watch" 
@@ -190,18 +190,20 @@ export const AnimatedSpeaking = ({
                   icon={<ExternalLink className="h-4 w-4" />}
                 />
               </a>
-              <button
-                onClick={handlePrev}
-                className="h-8 w-10 rounded-xl bg-secondary border border-foreground/20 flex items-center justify-center group/button transition-all duration-300 hover:bg-secondary/80"
-              >
-                <ChevronLeft className="h-4 w-4 text-foreground group-hover/button:translate-x-[-2px] transition-transform duration-300" />
-              </button>
-              <button
-                onClick={handleNext}
-                className="h-8 w-10 rounded-xl bg-secondary border border-foreground/20 flex items-center justify-center group/button transition-all duration-300 hover:bg-secondary/80"
-              >
-                <ChevronRight className="h-4 w-4 text-foreground group-hover/button:translate-x-[2px] transition-transform duration-300" />
-              </button>
+              <div className="flex items-center gap-4">
+                <button
+                  onClick={handlePrev}
+                  className="h-8 w-10 rounded-xl bg-secondary border border-foreground/20 flex items-center justify-center group/button transition-all duration-300 hover:bg-secondary/80"
+                >
+                  <ChevronLeft className="h-4 w-4 text-foreground group-hover/button:translate-x-[-2px] transition-transform duration-300" />
+                </button>
+                <button
+                  onClick={handleNext}
+                  className="h-8 w-10 rounded-xl bg-secondary border border-foreground/20 flex items-center justify-center group/button transition-all duration-300 hover:bg-secondary/80"
+                >
+                  <ChevronRight className="h-4 w-4 text-foreground group-hover/button:translate-x-[2px] transition-transform duration-300" />
+                </button>
+              </div>
             </div>
           </motion.div>
         </div>
