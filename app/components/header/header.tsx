@@ -1,11 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,6 +26,59 @@ export default function Header() {
     window.addEventListener("resize", onResize, { passive: true });
     return () => window.removeEventListener("resize", onResize);
   }, []);
+
+  // Handle hash navigation on page load
+  useEffect(() => {
+    if (pathname === "/" && window.location.hash === "#about") {
+      const performScroll = () => {
+        const aboutElement = document.getElementById("about");
+        if (aboutElement) {
+          const elementRect = aboutElement.getBoundingClientRect();
+          const elementTop = elementRect.top + window.scrollY;
+          const elementHeight = elementRect.height;
+          const scrollPosition = elementTop + elementHeight / 2 - window.innerHeight / 2;
+          
+          window.scrollTo({
+            top: Math.max(0, scrollPosition),
+            behavior: "smooth",
+          });
+        }
+      };
+      
+      // Small delay to ensure DOM is ready
+      setTimeout(performScroll, 100);
+    }
+  }, [pathname]);
+
+  const scrollToAboutMiddle = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    
+    const performScroll = () => {
+      const aboutElement = document.getElementById("about");
+      if (aboutElement) {
+        const elementRect = aboutElement.getBoundingClientRect();
+        const elementTop = elementRect.top + window.scrollY;
+        const elementHeight = elementRect.height;
+        const scrollPosition = elementTop + elementHeight / 2 - window.innerHeight / 2;
+        
+        window.scrollTo({
+          top: Math.max(0, scrollPosition),
+          behavior: "smooth",
+        });
+      }
+    };
+
+    if (pathname !== "/") {
+      // If not on home page, navigate first
+      router.push("/");
+      setTimeout(performScroll, 300);
+    } else {
+      // Already on home page, scroll immediately
+      performScroll();
+    }
+    
+    setMobileOpen(false);
+  };
 
   return (
     <header
@@ -66,6 +122,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/#about"
+                  onClick={scrollToAboutMiddle}
                   className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
                 >
                   About
@@ -107,7 +164,7 @@ export default function Header() {
           >
             <ul className="px-4 py-3 space-y-1">
               <li>
-                <Link href="/#about" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                <Link href="/#about" onClick={scrollToAboutMiddle} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
                   about
                 </Link>
               </li>

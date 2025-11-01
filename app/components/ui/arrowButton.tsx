@@ -50,7 +50,7 @@ export default function ArrowButton({ text, href, onClick, size = 'md', classNam
     <>
       {/* Subtle hover background */}
       <motion.div 
-        className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent"
+        className="absolute inset-0 bg-linear-to-r from-transparent via-white to-transparent"
         initial={{ opacity: 0 }}
         animate={{ opacity: isHovered ? 0.03 : 0 }}
         transition={{ duration: 0.3 }}

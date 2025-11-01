@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="w-full max-w-6xl mx-auto px-4 md:px-6">
+    <div id="about" className="w-full max-w-6xl mx-auto px-4 md:px-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div className="flex items-center">
           <h2 className="text-4xl md:text-5xl font-semibold">About Reta Jo Lewis</h2>
