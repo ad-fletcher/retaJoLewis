@@ -58,7 +58,7 @@ export default function Hero() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                        transition={{ duration: 0.8 }}
                         className="relative w-full md:w-auto flex justify-center md:justify-end flex-1 md:pr-0 px-4 md:px-0"
                     >
                         <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">

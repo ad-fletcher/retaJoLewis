@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const pathname = usePathname();
   const router = useRouter();
 
@@ -21,8 +22,11 @@ export default function Header() {
 
   useEffect(() => {
     const onResize = () => {
-      if (window.innerWidth >= 768) setMobileOpen(false);
+      const isMobileView = window.innerWidth < 768;
+      setIsMobile(isMobileView);
+      if (!isMobileView) setMobileOpen(false);
     };
+    onResize();
     window.addEventListener("resize", onResize, { passive: true });
     return () => window.removeEventListener("resize", onResize);
   }, []);
@@ -84,9 +88,11 @@ export default function Header() {
     <header
       role="banner"
       className={
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300" +
-        (scrolled
-          ? " backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80"
+        "fixed inset-x-0 top-0 z-[100] transition-colors duration-300" +
+        (scrolled || mobileOpen
+          ? isMobile && mobileOpen
+            ? " bg-white"
+            : " backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80"
           : " bg-transparent")
       }
     >
@@ -159,28 +165,28 @@ export default function Header() {
             id="mobile-nav"
             className={
               (mobileOpen ? "block" : "hidden") +
-              " md:hidden absolute inset-x-0 top-full mt-1 rounded-b-lg border border-black/10 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 shadow-lg"
+              " md:hidden absolute inset-x-0 top-full mt-1 z-[101] rounded-b-lg border border-black/10 bg-white shadow-lg"
             }
           >
             <ul className="px-4 py-3 space-y-1">
               <li>
                 <Link href="/#about" onClick={scrollToAboutMiddle} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
-                  about
+                  About
                 </Link>
               </li>
               <li>
                 <Link href="/Speaking" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
-                  speaking
+                  Speaking
                 </Link>
               </li>
               <li>
                 <Link href="/Affiliations" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
-                  affiliations
+                  Affiliations
                 </Link>
               </li>
               <li>
                 <Link href="/Contact" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
-                  contact
+                  Contact
                 </Link>
               </li>
             </ul>

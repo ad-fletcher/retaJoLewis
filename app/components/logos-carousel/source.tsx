@@ -27,9 +27,24 @@ export function LogosCarousel({
 }) {
   const [index, setIndex] = React.useState(0);
   const [animate, setAnimate] = React.useState(false);
+  const [isMobile, setIsMobile] = React.useState(false);
 
-  const logos = LOGOS[index].slice(0, count ?? LOGOS[index].length);
-  const logosNext = LOGOS[(index + 1) % LOGOS.length].slice(0, count ?? LOGOS[(index + 1) % LOGOS.length].length);
+  React.useEffect(() => {
+    function checkMobile() {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    }
+    
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
+
+  const logoCount = count ?? (isMobile ? 3 : LOGOS[index].length);
+  const logos = LOGOS[index].slice(0, logoCount);
+  const logosNext = LOGOS[(index + 1) % LOGOS.length].slice(0, logoCount);
 
   React.useEffect(() => {
     const id = setTimeout(() => {

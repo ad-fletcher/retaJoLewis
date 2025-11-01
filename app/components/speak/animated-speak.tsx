@@ -157,7 +157,7 @@ export const AnimatedSpeaking = ({
             <p className="text-sm text-muted-foreground">
               {testimonials[active].title}
             </p>
-            <motion.p className="text-lg text-muted-foreground mt-8">
+            <motion.p className="hidden md:block text-lg text-muted-foreground mt-8">
               {testimonials[active].description.split(" ").map((word, index) => (
                 <motion.span
                   key={index}

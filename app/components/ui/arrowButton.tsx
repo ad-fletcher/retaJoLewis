@@ -65,7 +65,7 @@ export default function ArrowButton({ text, href, onClick, size = 'md', classNam
           {text}
         </motion.span>
         <motion.span
-          className="inline-flex"
+          className="hidden md:inline-flex"
           initial={{ opacity: 0, x: -10 }}
           animate={{ 
             opacity: isHovered ? 1 : 0,
