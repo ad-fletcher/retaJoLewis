@@ -4,171 +4,114 @@ import { useMemo } from "react";
 import Image from "next/image";
 
 type Affiliation = {
-  name: string;
-  description: string;
   role: string;
-  period?: string;
+  organization: string;
+  description: string;
   logo?: string;
-  links?: { label: string; url: string }[];
-  additionalInfo?: string;
-  fullDescription?: boolean; // If true, description already contains full text including role
 };
 
 export default function AffiliationsPage() {
-    const currentAffiliations = useMemo<Affiliation[]>(() => [
-        {
-          name: "Export–Import Bank of the United States (EXIM)",
-          description: "The official export credit agency of the United States, providing financing and insurance to support American exports.",
-          role: "President and Chair of the Board of Directors",
-          period: "February 2022 – present",
-          logo: "/exportImport.svg",
-        },
-        {
-          name: "Council on Foreign Relations (CFR)",
-          description: "An independent, nonpartisan think tank focused on foreign policy and international affairs.",
-          role: "Life Member",
-          logo: "/cfr.svg",
-        },
-        {
-          name: "Leadership Council for Women in National Security (LCWINS)",
-          description: "A nonprofit organization dedicated to advancing women's leadership in national security.",
-          role: "Steering Committee Member (former Board Member)",
-          logo: "/lcw.svg",
-        },
-        {
-          name: "D.C. Democratic State Committee",
-          description: "The governing body of the Democratic Party in the District of Columbia.",
-          role: "At-Large Committeewoman",
-        },
-        {
-          name: "International Women's Forum (IWF)",
-          description: "A global organization of women leaders working to advance women's leadership across all sectors.",
-          role: "Member",
-          logo: "/iwfLogo.svg",
-        },
-      ], []);
-      
+  const currentAffiliations = useMemo<Affiliation[]>(() => [
+    {
+      role: "CoChair, Global Future Council on Advance Manufacturing and Value Chains",
+      organization: "World Economic Forum",
+      description: "The World Economic Forum (WEF) is the international organization for Public-Private Cooperation. It provides a global, impartial and not-for-profit platform for meaningful connection between stakeholders to establish trust and build initiatives for cooperation and progress.",
+      logo: "/wef.png",
+    },
+    {
+      role: "Keynote Speaker",
+      organization: "Leading Authorities, Inc.",
+      description: "The Leading Authority, Inc. is Washington, D.C. top speakers bureau for sourcing and securing incredible keynote speakers, moderators and more for any type of meeting and for any audience.",
+      logo: "/leadingauthorities.png",
+    },
+    {
+      role: "Life Member",
+      organization: "Council on Foreign Relations",
+      description: "The Council on Foreign Relations (CFR) is an independent, nonpartisan American think tank specializing in U.S. foreign policy and international Relations.",
+      logo: "/cfr.svg",
+    },
+    {
+      role: "Member of Advisory Board and Advisory Committee Economic Projects",
+      organization: "American Leadership Initiative",
+      description: "The American Leadership Initiative (ALI) is a non-profit organization that is developing a 21st century vision and policy agenda for American global leadership, based on American interest and shared values.",
+      logo: "/americanLeadershipInitiative.webp",
+    },
+    {
+      role: "Member",
+      organization: "Leadership Council on Women in National Security",
+      description: "The Leadership Council on Women in National Security (LCWINS) is a nonprofit 501(c)3 organization committed to advancing gender parity in national security and foreign policy decision-making.",
+      logo: "/lcw.png",
+    },
+    {
+      role: "Member",
+      organization: "Ellis Island Medals of Honor Advisory Committee",
+      description: "The Ellis Island Medals of Honor Advisory Committee is a nonprofit organization that celebrates immigrant contributions and American diversity through public recognition and civic engagement.",
+      logo: "/ellisIsland.webp",
+    },
+    {
+      role: "Member",
+      organization: "Blue Star Families National Advisory Board",
+      description: "The Blue Star Families (BSF) is the nations largest nonprofit dedicated to supporting military and veteran families through community building, career development, and policy advocacy.",
+      logo: "/blueStarFamilies.png",
+    },
+  ], []);
 
-      const pastGovernmentRoles = useMemo<Affiliation[]>(() => [
-        {
-          name: "U.S. Department of State",
-          description: "Federal executive department responsible for foreign policy and international relations.",
-          role: "Special Representative for Global Intergovernmental Affairs",
-          period: "2010–2013, Obama Administration",
-          logo: "/state.svg",
-        },
-        {
-          name: "The White House",
-          description: "Executive office of the President of the United States.",
-          role: "Special Assistant to the President for Political Affairs",
-          period: "1993–1995, Clinton Administration",
-        },
-        {
-          name: "District of Columbia Government",
-          description: "Local government of the District of Columbia, responsible for municipal services and administration.",
-          role: "Chief of Staff, Department of Public Works",
-          period: "Early 1990s",
-          additionalInfo: "And later chaired the D.C. Commission for Women",
-        },
-        {
-          name: "Obama-Biden Transition Project",
-          description: "Transition team preparing for the Obama-Biden administration.",
-          role: "Director of Business Outreach",
-          period: "2008–2009",
-        },
-        {
-          name: "Political Campaign Roles",
-          description: "Active in political campaigns, serving on the National Finance Committee for Hillary Clinton's 2008 and 2016 presidential campaigns, as a pledged delegate to the 2016 Democratic National Convention, and as a candidate in the 2014 D.C. mayoral election.",
-          role: "",
-          fullDescription: true,
-        },
-        {
-          name: "German Marshall Fund of the United States (GMF)",
-          description: "Nonpartisan policy organization dedicated to strengthening transatlantic cooperation, focused on working with Congress and public sector partners.",
-          role: "Senior Fellow and Director of Congressional Affairs",
-          period: "2015–2022",
-          logo: "/gmf.jpg",
-        },
-        {
-          name: "U.S. Chamber of Commerce",
-          description: "Leading business advocacy organization; role focused on public-private outreach and government-facing initiatives.",
-          role: "Vice President and Counselor to the President",
-          period: "Early 2000s",
-          logo: "/coc.svg",
-          additionalInfo: "Focusing on outreach to small businesses and women- and minority-owned enterprises",
-        },
-      ], []);
-      
-
-      const pastPrivateRoles = useMemo<Affiliation[]>(() => [
-        {
-          name: "Arter & Hadden LLP",
-          description: "Of Counsel, specializing in representing government officials and guiding regulatory and policy matters.",
-          role: "Of Counsel",
-          period: "1996–1997",
-        },
-        {
-          name: "Greenberg Traurig LLP",
-          description: "Shareholder (Partner), active in Government Affairs and Public Finance, represented multinational corporations, trade associations, and government entities.",
-          role: "Shareholder",
-          period: "1997–2000",
-        },
-        {
-          name: "Edwards Angell Palmer & Dodge LLP (later Edwards Wildman Palmer LLP)",
-          description: "Counsel, provided strategic and legal counsel for international business development, focusing on emerging markets.",
-          role: "Counsel",
-          period: "2007–2009",
-        },
-        {
-          name: "Vanderbilt Consulting, LLC",
-          description: "Managing director of a firm offering government relations and strategic counsel to clients for regulatory, policy, and international business development issues.",
-          role: "Managing Director",
-          period: "2005–2007",
-        },
-      ], []);
-      
+  const pastAffiliations = useMemo<Affiliation[]>(() => [
+    {
+      role: "27th Chairman, President, and CEO",
+      organization: "Export-Import Bank of the United States",
+      description: "The Export-Import Bank of the United States (EXIM) is the official export credit agency of the United States, providing financing and insurance to support American exports. During her tenure from 2022 to 2025, Reta Jo Lewis became the first African American and only the second woman to lead the agency, overseeing $135 billion in financing authority. Under her leadership, EXIM expanded its reach to 177 countries and authorized more than $22 billion in financing to support U.S. jobs and exports.",
+      logo: "/exportImport.svg",
+    },
+    {
+      role: "Senior Fellow and Director of Congressional Affairs",
+      organization: "German Marshall Fund of the United States",
+      description: "The German Marshall Fund of the United States (GMF) is a nonpartisan, nonprofit organization focused on transatlantic affairs. GMF was founded as an American foundation in 1972 with a gift from Germany in appreciation for aid received through the Marshall Plan after World War II.",
+      logo: "/gmf.jpg",
+    },
+    {
+      role: "Vice President and Counselor to the President",
+      organization: "United States Chamber of Commerce Foundation",
+      description: "The U.S. Chamber of Commerce Foundation (USCCF) is a 501(c)(3) nonprofit affiliate of the U.S. Chamber of Commerce, dedicated to strengthening America's long term competitiveness by addressing developments that affect our nation, our economy and the global business environment.",
+      logo: "/coc.svg",
+    },
+    {
+      role: "Fellow",
+      organization: "Presidential Management Fellows Program",
+      description: "The Presidential Management Fellows Program (PMF) was a two-year fellowship training and leadership development program at a United States government agency, administered by the U.S. Office of Personnel Management for advanced degree holders entering public service.",
+      logo: "/pmfFellow.png",
+    },
+  ], []);
 
   const renderAffiliationCard = (affiliation: Affiliation, index: number) => {
-    const hasLogo = !!affiliation.logo;
-    
     return (
       <div
         key={index}
-        className={`flex flex-col ${hasLogo ? "sm:flex-row" : ""} gap-3 sm:gap-4 md:gap-6 items-start`}
+        className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-8 md:pb-10 border-b border-gray-200 last:border-b-0"
       >
-        {hasLogo && (
-          <div className="shrink-0 w-full sm:w-32 md:w-40 flex justify-center sm:justify-start">
-            <div className="relative w-full aspect-[4/3] max-w-[120px] sm:max-w-[160px] md:max-w-none">
+        {affiliation.logo && (
+          <div className="shrink-0 w-32 h-32 sm:w-40 sm:h-40 flex justify-center sm:justify-start sm:self-start">
+            <div className="relative w-full h-full">
               <Image
-                src={affiliation.logo!}
-                alt={affiliation.name}
+                src={affiliation.logo}
+                alt={affiliation.organization}
                 fill
                 className="object-contain"
-                sizes="(max-width: 640px) 120px, (max-width: 768px) 128px, 160px"
-                unoptimized={affiliation.logo?.endsWith('.jpg')}
+                sizes="128px"
+                unoptimized={affiliation.logo?.endsWith('.jpg') || affiliation.logo?.endsWith('.webp') || affiliation.logo?.endsWith('.png')}
               />
             </div>
           </div>
         )}
-        <div className="prose prose-sm sm:prose-base md:prose-lg max-w-none flex-1">
-          <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3">
-            {affiliation.name}
+        <div className="flex-1 prose prose-sm sm:prose-base md:prose-lg max-w-none">
+          <h3 className="text-base sm:text-lg md:text-xl font-semibold mb-2 text-gray-900">
+            {affiliation.role}
           </h3>
-          <p className="text-sm sm:text-base text-gray-700 leading-relaxed mb-2">
-            {affiliation.fullDescription ? (
-              affiliation.description
-            ) : (
-              <>
-                {affiliation.description}
-                {affiliation.role && (
-                  <>
-                    {" "}Reta {affiliation.period ? "served" : "serves"} as {affiliation.role}
-                    {affiliation.period && ` (${affiliation.period})`}
-                    {affiliation.additionalInfo && ` ${affiliation.additionalInfo}`}.
-                  </>
-                )}
-              </>
-            )}
+          <h4 className="text-lg sm:text-xl md:text-2xl font-semibold mb-3 sm:mb-4 text-gray-900">
+            {affiliation.organization}
+          </h4>
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
+            {affiliation.description}
           </p>
         </div>
       </div>
@@ -177,45 +120,35 @@ export default function AffiliationsPage() {
 
   return (
     <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-4xl">
+      <div className="mx-auto max-w-5xl">
         <div className="py-8 sm:py-12 md:py-20">
           {/* Page Header */}
           <div className="text-center mb-8 sm:mb-12 md:mb-16 px-2">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 sm:mb-4">
-              Affiliations
+              Reta Jo Lewis
             </h1>
-            <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
-              Reta Jo Lewis&apos;s professional affiliations and roles across government, private sector, and nonprofit organizations.
-            </p>
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-6 sm:mb-8">
+              Affiliations
+            </h2>
           </div>
 
           {/* Current Affiliations */}
           <section className="mb-12 sm:mb-16 md:mb-20">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 pb-3 sm:pb-4 border-b border-gray-200">
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 pb-3 sm:pb-4 border-b border-gray-300">
               Current Affiliations
             </h2>
-            <div className="space-y-6 sm:space-y-8">
+            <div className="space-y-0">
               {currentAffiliations.map((affiliation, index) => renderAffiliationCard(affiliation, index))}
             </div>
           </section>
 
-          {/* Past Government & Public Sector Roles */}
+          {/* Past Affiliations */}
           <section className="mb-12 sm:mb-16 md:mb-20">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 pb-3 sm:pb-4 border-b border-gray-200">
-              Past Government & Public Sector Roles
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 pb-3 sm:pb-4 border-b border-gray-300">
+              Past Affiliations
             </h2>
-            <div className="space-y-6 sm:space-y-8">
-              {pastGovernmentRoles.map((affiliation, index) => renderAffiliationCard(affiliation, index))}
-            </div>
-          </section>
-
-          {/* Past Private Sector & Nonprofit Roles */}
-          <section className="mb-12 sm:mb-16 md:mb-20">
-            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold mb-6 sm:mb-8 pb-3 sm:pb-4 border-b border-gray-200">
-              Past Private Sector & Nonprofit Roles
-            </h2>
-            <div className="space-y-6 sm:space-y-8">
-              {pastPrivateRoles.map((affiliation, index) => renderAffiliationCard(affiliation, index))}
+            <div className="space-y-0">
+              {pastAffiliations.map((affiliation, index) => renderAffiliationCard(affiliation, index))}
             </div>
           </section>
         </div>
@@ -223,4 +156,3 @@ export default function AffiliationsPage() {
     </div>
   );
 }
-

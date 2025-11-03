@@ -6,15 +6,15 @@ import styles from "./source.module.css";
 export const LOGOS = [
   [
     <WEF key="1" />,
-    <ExportImport key="2" />,
-    <CFR key="3" />,
-    <GMF key="4" />,
+    <CFR key="2" />,
+    <LCW key="3" />,
+    <LeadingAuthorities key="4" />,
   ],
   [
-    <LCW key="5" />,
-    <State key="6" />,
-    <REA key="7" />,
-    <IWF key="8" />,
+    <AmericanLeadershipInitiative key="5" />,
+    <EllisIsland key="6" />,
+    <BlueStarFamilies key="7" />,
+    <WEF key="8" />,
   ],
 ];
 
@@ -42,7 +42,7 @@ export function LogosCarousel({
     };
   }, []);
 
-  const logoCount = count ?? (isMobile ? 3 : LOGOS[index].length);
+  const logoCount = count ?? (isMobile ? 3 : 4);
   const logos = LOGOS[index].slice(0, logoCount);
   const logosNext = LOGOS[(index + 1) % LOGOS.length].slice(0, logoCount);
 
@@ -150,48 +150,22 @@ export function Logo({
 
 
 
-function ExportImport() {
-  return (
-    <img
-      src="/exportImport.svg"
-      alt="ExportImport"
-    />
-  );
-}
-
-function IWF() {
-  return (
-    <img
-      src="/iwf.png"
-      alt="Internatioal Womens Forum"
-    />
-  );
-}
 function CFR() {
   return (
     <img
       src="/cfr.svg"
-      alt="Counicl on Foreign Relations"
-    />
-  );
-}
-function GMF() {
-  return (
-    <img
-      src="/gmf.jpg"
-      alt="German Marshall Fund"
+      alt="Council on Foreign Relations"
     />
   );
 }
 function LCW() {
   return (
     <img
-      src="/lcw.svg"
-      alt="lcw"
+      src="/lcw.png"
+      alt="Leadership Council on Women in National Security"
     />
   );
 }
-
 function WEF() {
   return (
     <img
@@ -200,19 +174,35 @@ function WEF() {
     />
   );
 }
-function State() {
+function LeadingAuthorities() {
   return (
     <img
-      src="/stateDep.png"
-      alt="World Economic Forum"
+      src="/leadingauthorities.png"
+      alt="Leading Authorities, Inc."
     />
   );
 }
-function REA() {
+function AmericanLeadershipInitiative() {
   return (
     <img
-      src="/rea.svg"
-      alt="Rare Earths Americas"
+      src="/americanLeadershipInitiative.webp"
+      alt="American Leadership Initiative"
+    />
+  );
+}
+function EllisIsland() {
+  return (
+    <img
+      src="/ellisIsland.webp"
+      alt="Ellis Island Medals of Honor Advisory Committee"
+    />
+  );
+}
+function BlueStarFamilies() {
+  return (
+    <img
+      src="/blueStarFamilies.png"
+      alt="Blue Star Families National Advisory Board"
     />
   );
 }

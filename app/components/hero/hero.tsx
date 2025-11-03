@@ -64,7 +64,7 @@ export default function Hero() {
                         <div className="relative w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
                             <div className="absolute -z-10 w-full h-full rounded-2xl bg-gradient-to-br from-[#f8b3c4]/30 to-transparent blur-2xl"></div>
                             <img
-                                src="/reta.png"
+                                src="/retaSpeech.png"
                                 alt="Reta Jo Lewis"
                                 className="rounded-2xl shadow-2xl w-full object-cover filter brightness-105"
                             />

@@ -127,8 +127,7 @@ export default function Header() {
             <ul className="flex items-center gap-8">
               <li>
                 <Link
-                  href="/#about"
-                  onClick={scrollToAboutMiddle}
+                  href="/about"
                   className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
                 >
                   About
@@ -170,7 +169,7 @@ export default function Header() {
           >
             <ul className="px-4 py-3 space-y-1">
               <li>
-                <Link href="/#about" onClick={scrollToAboutMiddle} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                <Link href="/about" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
                   About
                 </Link>
               </li>

@@ -24,8 +24,8 @@ export default function ContactPage() {
             <div className="relative w-full md:w-auto flex justify-center md:justify-end flex-1 min-w-0">
               <div className="relative w-full max-w-[280px] sm:max-w-md md:max-w-lg lg:max-w-xl">
                 <img
-                  src="/reta.png"
-                  alt="Reta Jo Lewis"
+                  src="/retaConnect.png"
+                  alt="Reta Connect"
                   className="rounded-2xl shadow-2xl w-full h-auto object-cover"
                 />
               </div>
