@@ -7,7 +7,7 @@ export default function ContactPage() {
             {/* Text Content - Left */}
             <div className="space-y-4 sm:space-y-5 md:space-y-6 text-center md:text-left flex-1 w-full md:w-auto">
               <h1 className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl font-semibold text-black">
-                Connect
+                Contact
               </h1>
               <h2 className="text-lg sm:text-xl md:text-2xl font-medium text-black/80">
                 Press, Speaking, and Advisory Inquiries
@@ -15,7 +15,7 @@ export default function ContactPage() {
               <p className="text-base sm:text-lg md:text-xl text-black/70 leading-relaxed">
                 Contact Reta's team using the email below to explore partnership opportunities:{" "}
                 <a href="mailto:connect@reta.com" className="text-black underline break-all sm:break-normal">
-                  connect@reta.com
+                  info@retajolewis.com
                 </a>
               </p>
             </div>

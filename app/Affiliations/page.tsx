@@ -13,22 +13,29 @@ type Affiliation = {
 export default function AffiliationsPage() {
   const currentAffiliations = useMemo<Affiliation[]>(() => [
     {
-      role: "CoChair, Global Future Council on Advance Manufacturing and Value Chains",
+      role: "Co-Chair, Global Future Council on Advance Manufacturing and Value Chains",
       organization: "World Economic Forum",
       description: "The World Economic Forum (WEF) is the international organization for Public-Private Cooperation. It provides a global, impartial and not-for-profit platform for meaningful connection between stakeholders to establish trust and build initiatives for cooperation and progress.",
       logo: "/wef.png",
+    },
+
+    {
+      role: "Life Member",
+      organization: "Council on Foreign Relations",
+      description: "The Council on Foreign Relations (CFR) is an independent, nonpartisan American think tank specializing in U.S. foreign policy and international Relations.",
+      logo: "/cfr.svg",
+    },
+    {
+      role: "Board Member",
+      organization: "Rare Earth Americas",
+      description: "Rare Earth Americas is a company focused on developing and securing critical rare earth mineral resources essential for modern technology, clean energy, and national security. The organization works to establish a sustainable and secure supply chain for rare earth elements in the Americas.",
+      logo: "/rareEarthAmericas.png",
     },
     {
       role: "Keynote Speaker",
       organization: "Leading Authorities, Inc.",
       description: "The Leading Authority, Inc. is Washington, D.C. top speakers bureau for sourcing and securing incredible keynote speakers, moderators and more for any type of meeting and for any audience.",
       logo: "/leadingauthorities.png",
-    },
-    {
-      role: "Life Member",
-      organization: "Council on Foreign Relations",
-      description: "The Council on Foreign Relations (CFR) is an independent, nonpartisan American think tank specializing in U.S. foreign policy and international Relations.",
-      logo: "/cfr.svg",
     },
     {
       role: "Member of Advisory Board and Advisory Committee Economic Projects",
@@ -54,6 +61,19 @@ export default function AffiliationsPage() {
       description: "The Blue Star Families (BSF) is the nations largest nonprofit dedicated to supporting military and veteran families through community building, career development, and policy advocacy.",
       logo: "/blueStarFamilies.png",
     },
+    {
+      role: "Board Member",
+      organization: "New York Stock Exchange",
+      description: "The New York Stock Exchange (NYSE) is the world's largest stock exchange by market capitalization, providing a platform for companies to raise capital and for investors to trade securities. As a board member, Reta Jo Lewis contributes to strategic governance and oversight of the exchange's operations and policies.",
+      logo: "/nyseLogo.jpeg",
+    },
+    {
+      role: "Steering Committee",
+      organization: "Global Power Women's Network",
+      description: "The Global Power Women's Network is dedicated to empowering female leaders by providing a platform for mentorship, knowledge-sharing, and professional development. Through specialized discussions, networking opportunities, and initiatives, the network supports women in navigating leadership challenges, driving innovation, and shaping the future of their industries.",
+      logo: "/globalPowerWomen.png",
+    },
+
   ], []);
 
   const pastAffiliations = useMemo<Affiliation[]>(() => [
