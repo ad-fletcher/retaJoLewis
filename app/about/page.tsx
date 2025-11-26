@@ -1,9 +1,24 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-4xl">
         <div className="text-center mb-8 sm:mb-12 mt-4 sm:mt-8 px-2">
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold mb-3 sm:mb-4">About Reta Jo Lewis</h1>
+        </div>
+
+        <div className="flex justify-center mb-8 sm:mb-12">
+          <div className="relative w-full max-w-md h-auto">
+            <Image
+              src="/retaUSA.png"
+              alt="Reta Jo Lewis"
+              width={800}
+              height={1000}
+              className="rounded-lg shadow-lg object-cover"
+              unoptimized
+            />
+          </div>
         </div>
 
         <div className="prose prose-lg max-w-none text-base md:text-lg leading-relaxed space-y-6">

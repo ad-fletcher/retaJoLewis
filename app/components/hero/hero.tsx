@@ -47,7 +47,7 @@ export default function Hero() {
                             className="pt-4 md:pt-6"
                         >
                             <PhysicsButton
-                                text="Connect"
+                                text="Contact"
                                 href="/Contact"
                                 size="md"
                             />
