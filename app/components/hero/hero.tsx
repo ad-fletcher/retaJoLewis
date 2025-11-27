@@ -37,8 +37,8 @@ export default function Hero() {
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-black leading-tight tracking-tighter">
                             Reta Jo Lewis
                         </h1>
-                        <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-black/80">
-                            27th President<br className="md:hidden" /> of the Export–Import<br className="hidden md:inline" /> Bank<br className="md:hidden" /> of the United States
+                        <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-medium text-black/80 leading-relaxed max-w-2xl mx-auto md:mx-0">
+                            Reta Jo Lewis is a global leader in advancing U.S. economic competitiveness, trade, and investment. She delivers strategic insights and policy leadership that strengthen economic opportunity at home and abroad.
                         </h2>
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}

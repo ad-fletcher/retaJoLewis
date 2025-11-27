@@ -151,18 +151,18 @@ export default function Header() {
               </li>
               <li>
                 <Link
-                  href="/Contact"
-                  className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
-                >
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <Link
                   href="/Vanderbilt"
                   className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
                 >
                   Vanderbilt
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/Contact"
+                  className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
+                >
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -192,13 +192,13 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link href="/Contact" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
-                  Contact
+                <Link href="/Vanderbilt" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                  Vanderbilt
                 </Link>
               </li>
               <li>
-                <Link href="/Vanderbilt" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
-                  Vanderbilt
+                <Link href="/Contact" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                  Contact
                 </Link>
               </li>
             </ul>
