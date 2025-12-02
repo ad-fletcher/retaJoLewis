@@ -139,13 +139,13 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
       const currentScale = projection.scale()
       const scaleFactor = currentScale / radius
 
-      // Draw ocean (globe background) - white for light mode
+      // Draw ocean (globe background) - transparent with subtle border
       context.beginPath()
       context.arc(containerWidth / 2, containerHeight / 2, currentScale, 0, 2 * Math.PI)
-      context.fillStyle = "#ffffff"
+      context.fillStyle = "rgba(114, 14, 30, 0.1)" // Dark red tint, very transparent
       context.fill()
-      context.strokeStyle = "#e5e7eb"
-      context.lineWidth = 2 * scaleFactor
+      context.strokeStyle = "rgba(212, 175, 55, 0.3)" // Gold border, transparent
+      context.lineWidth = 1 * scaleFactor
       context.stroke()
 
       if (landFeatures) {
@@ -153,8 +153,8 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
         const graticule = d3.geoGraticule()
         context.beginPath()
         path(graticule())
-        context.strokeStyle = "#d1d5db"
-        context.lineWidth = 1 * scaleFactor
+        context.strokeStyle = "rgba(255, 255, 255, 0.1)" // White grid, very subtle
+        context.lineWidth = 0.5 * scaleFactor
         context.globalAlpha = 0.3
         context.stroke()
         context.globalAlpha = 1
@@ -164,8 +164,8 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
         landFeatures.features.forEach((feature: any) => {
           path(feature)
         })
-        context.strokeStyle = "#9ca3af"
-        context.lineWidth = 1 * scaleFactor
+        context.strokeStyle = "rgba(255, 255, 255, 0.2)" // White outlines
+        context.lineWidth = 0.5 * scaleFactor
         context.stroke()
 
         // Draw halftone dots
@@ -180,7 +180,7 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
           ) {
             context.beginPath()
             context.arc(projected[0], projected[1], 1.2 * scaleFactor, 0, 2 * Math.PI)
-            context.fillStyle = "#6b7280"
+            context.fillStyle = "#d4af37" // Gold dots
             context.fill()
           }
         })
@@ -242,10 +242,10 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
 
   if (error) {
     return (
-      <div className={`flex items-center justify-center bg-white rounded-2xl p-8 ${className}`}>
+      <div className={`flex items-center justify-center bg-transparent rounded-2xl p-8 ${className}`}>
         <div className="text-center">
-          <p className="text-red-600 font-semibold mb-2">Error loading Earth visualization</p>
-          <p className="text-gray-600 text-sm">{error}</p>
+          <p className="text-red-400 font-semibold mb-2">Error loading Earth visualization</p>
+          <p className="text-gray-400 text-sm">{error}</p>
         </div>
       </div>
     )
@@ -254,13 +254,13 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
   return (
     <div className={`relative ${className}`}>
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white rounded-2xl z-10" style={{ width, height }}>
-
+        <div className="absolute inset-0 flex items-center justify-center bg-transparent rounded-2xl z-10" style={{ width, height }}>
+          {/* Optional: Add a loading spinner here if desired */}
         </div>
       )}
       <canvas
         ref={canvasRef}
-        className="w-full h-auto rounded-2xl bg-white"
+        className="w-full h-auto rounded-2xl bg-transparent"
         style={{ maxWidth: "100%", height: "auto", visibility: isLoading ? 'hidden' : 'visible' }}
       />
     </div>

@@ -88,11 +88,11 @@ export default function Header() {
     <header
       role="banner"
       className={
-        "fixed inset-x-0 top-0 z-[100] transition-colors duration-300" +
+        "fixed inset-x-0 top-0 z-100 transition-colors duration-300" +
         (scrolled || mobileOpen
           ? isMobile && mobileOpen
-            ? " bg-white"
-            : " backdrop-blur supports-[backdrop-filter]:bg-white/60 bg-white/80"
+            ? " bg-[#4a121b]"
+            : " backdrop-blur supports-backdrop-filter:bg-[#4a121b]/60 bg-[#4a121b]/80"
           : " bg-transparent")
       }
     >
@@ -100,7 +100,7 @@ export default function Header() {
         <div className="relative flex h-20 items-center justify-between">
           <div className="shrink-0">
             <Link href="/" className="block select-none">
-              <span className="text-xl md:text-2xl font-semibold tracking-tight">Reta Jo Lewis</span>
+              <span className="text-2xl md:text-3xl font-serif font-medium tracking-tight text-white">Reta Jo Lewis</span>
             </Link>
           </div>
 
@@ -110,7 +110,7 @@ export default function Header() {
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
             onClick={() => setMobileOpen((v) => !v)}
-            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:text-black hover:bg-black/5 focus:outline-none focus:ring-2 focus:ring-black/20"
+            className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-200 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/20"
           >
             {mobileOpen ? (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6">
@@ -128,7 +128,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/about"
-                  className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
+                  className="text-lg text-gray-200 hover:text-white transition-colors"
                 >
                   About
                 </Link>
@@ -136,7 +136,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/Speaking"
-                  className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
+                  className="text-lg text-gray-200 hover:text-white transition-colors"
                 >
                   Speaking
                 </Link>
@@ -144,7 +144,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/Affiliations"
-                  className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
+                  className="text-lg text-gray-200 hover:text-white transition-colors"
                 >
                   Affiliations
                 </Link>
@@ -152,7 +152,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/Vanderbilt"
-                  className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
+                  className="text-lg text-gray-200 hover:text-white transition-colors"
                 >
                   Vanderbilt
                 </Link>
@@ -160,7 +160,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/Contact"
-                  className="text-lg lg:text-xl text-gray-700 hover:text-black transition-colors"
+                  className="text-lg text-gray-200 hover:text-white transition-colors"
                 >
                   Contact
                 </Link>
@@ -172,32 +172,32 @@ export default function Header() {
             id="mobile-nav"
             className={
               (mobileOpen ? "block" : "hidden") +
-              " md:hidden absolute inset-x-0 top-full mt-1 z-[101] rounded-b-lg border border-black/10 bg-white shadow-lg"
+              " md:hidden absolute inset-x-0 top-full mt-1 z-101 rounded-b-lg border border-white/10 bg-[#4a121b] shadow-lg"
             }
           >
             <ul className="px-4 py-3 space-y-1">
               <li>
-                <Link href="/about" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                <Link href="/about" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-200 hover:text-white hover:bg-white/10">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/Speaking" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                <Link href="/Speaking" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-200 hover:text-white hover:bg-white/10">
                   Speaking
                 </Link>
               </li>
               <li>
-                <Link href="/Affiliations" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                <Link href="/Affiliations" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-200 hover:text-white hover:bg-white/10">
                   Affiliations
                 </Link>
               </li>
               <li>
-                <Link href="/Vanderbilt" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                <Link href="/Vanderbilt" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-200 hover:text-white hover:bg-white/10">
                   Vanderbilt
                 </Link>
               </li>
               <li>
-                <Link href="/Contact" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-800 hover:bg-black/5">
+                <Link href="/Contact" onClick={() => setMobileOpen(false)} className="block rounded-md px-2 py-2 text-base text-gray-200 hover:text-white hover:bg-white/10">
                   Contact
                 </Link>
               </li>

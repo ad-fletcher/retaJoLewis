@@ -63,23 +63,23 @@ export const AnimatedSpeaking = ({
   }, []);
 
   return (
-    <div className={cn("max-w-sm md:max-w-4xl mx-auto px-4 md:px-8 lg:px-12 py-20 relative overflow-hidden", className)}>
+    <div className={cn("max-w-sm md:max-w-6xl mx-auto px-4 md:px-8 lg:px-12 py-20 relative overflow-hidden", className)}>
       {/* Grid background pattern */}
       <div 
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.05]"
         style={{
           backgroundImage: `
-            linear-gradient(to right, #000 1px, transparent 1px),
-            linear-gradient(to bottom, #000 1px, transparent 1px)
+            linear-gradient(to right, #fff 1px, transparent 1px),
+            linear-gradient(to bottom, #fff 1px, transparent 1px)
           `,
           backgroundSize: '40px 40px'
         }}
       />
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-3 md:mb-16">See Reta Speak</h2>
-      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-20">
-        <div>
-          <div className="relative h-80 w-full">
-            <AnimatePresence>
+      <h2 className="text-3xl md:text-5xl font-serif font-bold text-center mb-3 md:mb-16 text-white">See Reta Speak</h2>
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-24 items-center">
+        <div className="order-2 md:order-1">
+          <div className="relative h-[400px] w-full perspective-1000">
+            <AnimatePresence mode="popLayout">
               {testimonials.map((testimonial, index) => (
                 <motion.div
                   key={testimonial.src}
@@ -111,7 +111,7 @@ export const AnimatedSpeaking = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <div className="h-full w-full rounded-2xl overflow-hidden shadow-lg bg-white p-2">
+                  <div className="h-full w-full rounded-2xl overflow-hidden shadow-2xl bg-[#4a121b] border border-white/10 p-2">
                     <Image
                       src={testimonial.src}
                       alt={testimonial.name}
@@ -120,7 +120,7 @@ export const AnimatedSpeaking = ({
                       draggable={false}
                       unoptimized
                       priority={index === 0}
-                      className="h-full w-full rounded-xl object-contain object-center"
+                      className="h-full w-full rounded-xl object-cover object-center"
                       onError={(e) => {
                         console.error("Failed to load image:", testimonial.src);
                       }}
@@ -131,7 +131,7 @@ export const AnimatedSpeaking = ({
             </AnimatePresence>
           </div>
         </div>
-        <div className="flex justify-between flex-col py-4">
+        <div className="flex justify-center flex-col py-4 order-1 md:order-2 space-y-8">
           <motion.div
             key={active}
             initial={{
@@ -147,17 +147,17 @@ export const AnimatedSpeaking = ({
               opacity: 0,
             }}
             transition={{
-              duration: 0.2,
-              ease: "easeInOut",
+              duration: 0.4,
+              ease: "easeOut",
             }}
           >
-            <h3 className="text-2xl font-bold text-foreground">
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 leading-tight">
               {testimonials[active].name}
             </h3>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-lg text-[#d4af37] font-medium mb-6">
               {testimonials[active].title}
             </p>
-            <motion.p className="hidden md:block text-lg text-muted-foreground mt-8">
+            <motion.p className="hidden md:block text-lg text-gray-300 leading-relaxed">
               {testimonials[active].description.split(" ").map((word, index) => (
                 <motion.span
                   key={index}
@@ -182,26 +182,29 @@ export const AnimatedSpeaking = ({
                 </motion.span>
               ))}
             </motion.p>
-            <div className="mt-2 flex flex-col md:flex-row items-center gap-4">
-              <a href={testimonials[active].videoUrl} target="_blank" rel="noopener noreferrer" className="inline-block">
+            <div className="mt-8 flex flex-col sm:flex-row items-center gap-6">
+              <a href={testimonials[active].videoUrl} target="_blank" rel="noopener noreferrer" className="inline-block w-full sm:w-auto">
                 <PhysicsButton 
-                  text="Watch" 
-                  size="sm" 
+                  text="Watch Video" 
+                  size="md" 
                   icon={<ExternalLink className="h-4 w-4" />}
+                  className="w-full sm:w-auto justify-center bg-[#720e1e] text-white border-[#720e1e] hover:bg-[#8a1124]"
                 />
               </a>
               <div className="flex items-center gap-4">
                 <button
                   onClick={handlePrev}
-                  className="h-8 w-10 rounded-xl bg-secondary border border-foreground/20 flex items-center justify-center group/button transition-all duration-300 hover:bg-secondary/80"
+                  className="h-12 w-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group/button transition-all duration-300 hover:bg-white/20 hover:border-white/30 hover:scale-110"
+                  aria-label="Previous"
                 >
-                  <ChevronLeft className="h-4 w-4 text-foreground group-hover/button:translate-x-[-2px] transition-transform duration-300" />
+                  <ChevronLeft className="h-6 w-6 text-white group-hover/button:translate-x-[-2px] transition-transform duration-300" />
                 </button>
                 <button
                   onClick={handleNext}
-                  className="h-8 w-10 rounded-xl bg-secondary border border-foreground/20 flex items-center justify-center group/button transition-all duration-300 hover:bg-secondary/80"
+                  className="h-12 w-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group/button transition-all duration-300 hover:bg-white/20 hover:border-white/30 hover:scale-110"
+                  aria-label="Next"
                 >
-                  <ChevronRight className="h-4 w-4 text-foreground group-hover/button:translate-x-[2px] transition-transform duration-300" />
+                  <ChevronRight className="h-6 w-6 text-white group-hover/button:translate-x-[2px] transition-transform duration-300" />
                 </button>
               </div>
             </div>

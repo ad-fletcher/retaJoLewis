@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section id="contact" className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
+    <section id="contact" className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-[#4a121b] to-[#591621] relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -15,10 +15,10 @@ export default function CTA() {
           className="max-w-3xl mx-auto text-center space-y-6 sm:space-y-8 md:space-y-10"
         >
           <div className="space-y-3 sm:space-y-4 md:space-y-6">
-            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black leading-tight px-2 sm:px-0">
+            <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight px-2 sm:px-0">
               Ready to Connect?
             </h3>
-            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-black/70 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
+            <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 max-w-2xl mx-auto leading-relaxed px-2 sm:px-0">
               Explore partnership opportunities, speaking engagements, and advisory services with Reta Jo Lewis.
             </p>
           </div>
@@ -33,15 +33,8 @@ export default function CTA() {
                   stiffness: 250,
                   damping: 25,
                 }}
-                className="relative bg-black text-white font-medium rounded-none shadow-lg overflow-hidden cursor-pointer border border-gray-800 px-8 py-3 text-base"
+                className="relative bg-white text-[#720e1e] font-serif font-medium rounded-none shadow-lg overflow-hidden cursor-pointer border border-white px-10 py-4 text-lg hover:bg-gray-50 transition-colors duration-300"
               >
-                {/* Subtle hover background */}
-                <motion.div 
-                  className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent"
-                  initial={{ opacity: 0 }}
-                  whileHover={{ opacity: 0.03 }}
-                  transition={{ duration: 0.3 }}
-                />
                 <span className="relative z-10 flex items-center justify-center">
                   Get in Touch
                 </span>

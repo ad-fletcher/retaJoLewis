@@ -26,13 +26,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
+  /* White card styling */
+  background-color: white;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+  /* Aspect ratio control */
+  aspect-ratio: 1/1;
+  width: clamp(96px, 22vw, 160px);
+  height: clamp(96px, 22vw, 160px);
 
   svg,
   img {
     display: block;
-    /* Responsive logo size: min 64px, scale with viewport, max 136px */
-    width: clamp(64px, 22vw, 136px);
-    height: clamp(64px, 22vw, 136px);
+    width: 100%;
+    height: 100%;
     object-fit: contain;
   }
 

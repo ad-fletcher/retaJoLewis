@@ -28,7 +28,7 @@ export default function PhysicsButton({ text, onClick, size = 'md', className, i
         damping: 25,
       }}
       className={cn(
-        "relative bg-white text-black font-medium rounded-2xl shadow-lg overflow-hidden cursor-pointer border border-gray-200",
+        "relative bg-[#720e1e] text-white font-medium rounded-2xl shadow-lg overflow-hidden cursor-pointer border border-[#720e1e]",
         sizeClasses[size],
         className
       )}

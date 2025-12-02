@@ -40,7 +40,7 @@ export default function ArrowButton({ text, href, onClick, size = 'md', classNam
       damping: 25,
     },
     className: cn(
-      "relative bg-black text-white font-medium rounded-none shadow-lg overflow-hidden cursor-pointer border border-gray-800",
+      "relative bg-[#720e1e] text-white font-medium rounded-none shadow-lg overflow-hidden cursor-pointer border border-[#720e1e]",
       sizeClasses[size],
       className
     ),

@@ -92,12 +92,12 @@
     var(--shadow-border), 0px 1px 1px rgba(0, 0, 0, 0.02),
     0px 8px 16px -4px rgba(0, 0, 0, 0.04),
     0px 24px 32px -8px rgba(0, 0, 0, 0.06);
-  --color-orange: #ff4d00;
-  --color-red: #ff2b43;
-  --color-orange-bg: #ff4d0010;
-  --color-orange-bg2: #ff4d0095;
-  --color-orange-bg3: #ff4d0018;
-  --color-yellow: #ffd335;
+  --color-orange: #720e1e;
+  --color-red: #9e1b32;
+  --color-orange-bg: #720e1e1a;
+  --color-orange-bg2: #720e1e95;
+  --color-orange-bg3: #720e1e26;
+  --color-yellow: #d4af37;
   --color-blue: #0070f3;
   --color-code-block-bg: #fff;
   --color-demo-bg: var(--color-gray2);

@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="bg-gray-50 border-t border-gray-200"
+      className="bg-[#4a121b] border-t border-white/10"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col items-center gap-8">
@@ -16,7 +16,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#about"
-                  className="text-base text-gray-700 hover:text-black transition-colors"
+                  className="text-base text-gray-300 hover:text-white transition-colors"
                 >
                   About
                 </Link>
@@ -24,7 +24,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/Speaking"
-                  className="text-base text-gray-700 hover:text-black transition-colors"
+                  className="text-base text-gray-300 hover:text-white transition-colors"
                 >
                   Speaking
                 </Link>
@@ -32,7 +32,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/#affliations"
-                  className="text-base text-gray-700 hover:text-black transition-colors"
+                  className="text-base text-gray-300 hover:text-white transition-colors"
                 >
                   Affliations
                 </Link>
@@ -40,7 +40,7 @@ export default function Footer() {
               <li>
                 <Link
                   href="/Contact"
-                  className="text-base text-gray-700 hover:text-black transition-colors"
+                  className="text-base text-gray-300 hover:text-white transition-colors"
                 >
                   Contact
                 </Link>
@@ -58,7 +58,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="text-gray-700 hover:text-black transition-colors"
+              className="text-gray-700 hover:text-[#720e1e] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +77,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="X (Twitter)"
-              className="text-gray-700 hover:text-black transition-colors"
+              className="text-gray-700 hover:text-[#720e1e] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +94,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
-              className="text-gray-700 hover:text-black transition-colors"
+              className="text-gray-700 hover:text-[#720e1e] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -108,10 +108,10 @@ export default function Footer() {
           </div>
 
           {/* Privacy Policy Link */}
-          <div className="pt-4 border-t border-gray-300 w-full text-center">
+          <div className="pt-4 border-t border-white/10 w-full text-center">
             <Link
               href="/privacy"
-              className="text-sm text-gray-600 hover:text-black transition-colors"
+              className="text-sm text-gray-400 hover:text-white transition-colors"
             >
               Privacy Policy
             </Link>

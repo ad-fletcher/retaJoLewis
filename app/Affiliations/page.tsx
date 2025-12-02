@@ -150,30 +150,30 @@ export default function AffiliationsPage() {
     return (
       <div
         key={index}
-        className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-8 md:pb-10 border-b border-gray-200 last:border-b-0"
+        className="flex flex-col sm:flex-row gap-6 sm:gap-8 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-12 border-b border-white/10 last:border-b-0"
       >
         {affiliation.logo && (
-          <div className="shrink-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 flex items-center justify-center sm:justify-start sm:self-start mx-auto sm:mx-0">
-            <div className="relative w-full h-full">
+          <div className="shrink-0 flex items-center justify-center sm:justify-start sm:self-start mx-auto sm:mx-0">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-xl p-4 shadow-lg flex items-center justify-center">
               <Image
                 src={affiliation.logo}
                 alt={affiliation.organization}
                 fill
-                className="object-contain"
-                sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, 160px"
+                className="object-contain p-2"
+                sizes="(max-width: 640px) 128px, 160px"
                 unoptimized={affiliation.logo?.endsWith('.jpg') || affiliation.logo?.endsWith('.webp') || affiliation.logo?.endsWith('.png')}
               />
             </div>
           </div>
         )}
         <div className="flex-1 prose prose-sm sm:prose-base md:prose-lg max-w-none">
-          <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-1 sm:mb-2 text-gray-900">
+          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif font-medium mb-1 sm:mb-2 text-[#d4af37]">
             {affiliation.role}
           </h3>
-          <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 md:mb-4 text-gray-900">
+          <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 text-white">
             {affiliation.organization}
           </h4>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
             {affiliation.description}
           </p>
         </div>
@@ -185,30 +185,30 @@ export default function AffiliationsPage() {
     return (
       <div
         key={index}
-        className="flex flex-col sm:flex-row gap-4 sm:gap-6 pt-4 sm:pt-6 md:pt-8 pb-6 sm:pb-8 md:pb-10 border-b border-gray-200 last:border-b-0"
+        className="flex flex-col sm:flex-row gap-6 sm:gap-8 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-12 border-b border-white/10 last:border-b-0"
       >
         {edu.logo && (
-          <div className="shrink-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 flex items-center justify-center sm:justify-start sm:self-start mx-auto sm:mx-0">
-            <div className="relative w-full h-full">
+          <div className="shrink-0 flex items-center justify-center sm:justify-start sm:self-start mx-auto sm:mx-0">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-xl p-4 shadow-lg flex items-center justify-center">
               <Image
                 src={edu.logo}
                 alt={edu.institution}
                 fill
-                className="object-contain"
-                sizes="(max-width: 640px) 96px, (max-width: 768px) 128px, 160px"
+                className="object-contain p-2"
+                sizes="(max-width: 640px) 128px, 160px"
                 unoptimized={edu.logo?.endsWith('.jpg') || edu.logo?.endsWith('.webp') || edu.logo?.endsWith('.png')}
               />
             </div>
           </div>
         )}
         <div className="flex-1 prose prose-sm sm:prose-base md:prose-lg max-w-none">
-          <h3 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold mb-1 sm:mb-2 text-gray-900">
+          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif font-medium mb-1 sm:mb-2 text-[#d4af37]">
             {edu.degree}
           </h3>
-          <h4 className="text-base sm:text-lg md:text-xl lg:text-2xl font-semibold mb-2 sm:mb-3 md:mb-4 text-gray-900">
+          <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 text-white">
             {edu.institution}
           </h4>
-          <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
             {edu.years}
           </p>
         </div>
@@ -217,22 +217,33 @@ export default function AffiliationsPage() {
   };
 
   return (
-    <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-3 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-5xl">
+    <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-3 sm:px-6 lg:px-8 bg-[#4a121b] relative">
+        {/* Grid background pattern */}
+        <div 
+        className="absolute inset-0 opacity-[0.05] pointer-events-none"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, #fff 1px, transparent 1px),
+            linear-gradient(to bottom, #fff 1px, transparent 1px)
+          `,
+          backgroundSize: '40px 40px'
+        }}
+      />
+      <div className="mx-auto max-w-5xl relative z-10">
         <div className="py-6 sm:py-8 md:py-12 lg:py-20">
           {/* Page Header */}
           <div className="text-center mb-6 sm:mb-8 md:mb-12 lg:mb-16 px-2">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-2 sm:mb-3 md:mb-4">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-2 sm:mb-3 md:mb-4 text-white">
               Reta Jo Lewis
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold mb-4 sm:mb-6 md:mb-8">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-medium mb-4 sm:mb-6 md:mb-8 text-[#d4af37]">
               Affiliations
             </h2>
           </div>
 
           {/* Current Affiliations */}
           <section className="mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-gray-300">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-[#d4af37]/30 text-white">
               Current Affiliations
             </h2>
             <div className="space-y-0">
@@ -242,7 +253,7 @@ export default function AffiliationsPage() {
 
           {/* Past Affiliations */}
           <section className="mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-gray-300">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-[#d4af37]/30 text-white">
               Past Affiliations
             </h2>
             <div className="space-y-0">
@@ -252,7 +263,7 @@ export default function AffiliationsPage() {
 
           {/* Education */}
           <section className="mb-8 sm:mb-12 md:mb-16 lg:mb-20">
-            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-gray-300">
+            <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-[#d4af37]/30 text-white">
               Education
             </h2>
             <div className="space-y-0">
