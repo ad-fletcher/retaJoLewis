@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function CTA() {
   return (
-    <section id="contact" className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-[#4a121b] to-[#591621] relative overflow-hidden">
+    <section id="contact" className="w-full py-12 sm:py-16 md:py-24 bg-gradient-to-b from-[#c0011e] to-[#800114] relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 md:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

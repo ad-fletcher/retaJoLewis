@@ -19,7 +19,7 @@ export default function Hero() {
             />
             
             {/* Gradient fade at bottom to blur grid transition */}
-            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#4a121b] pointer-events-none z-10"></div>
+            <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#c0011e] pointer-events-none z-10"></div>
             
             {/* Background blur effect */}
             <div className="absolute -z-10 w-[800px] h-[800px] rounded-full bg-[#720e1e]/20 blur-3xl -top-[200px] -right-[200px]"></div>
@@ -85,7 +85,7 @@ export default function Hero() {
                             <div className="absolute -inset-4 bg-gradient-to-r from-[#720e1e] to-[#d4af37] rounded-full opacity-20 blur-2xl group-hover:opacity-30 transition-opacity duration-1000"></div>
                             
                             <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
-                                <div className="absolute inset-0 bg-gradient-to-tr from-[#4a121b]/40 to-transparent z-10"></div>
+                                <div className="absolute inset-0 bg-gradient-to-tr from-[#c0011e]/40 to-transparent z-10"></div>
                                 <img
                                     src="/reta.png"
                                     alt="Reta Jo Lewis"

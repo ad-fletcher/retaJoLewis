@@ -111,7 +111,7 @@ export const AnimatedSpeaking = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <div className="h-full w-full rounded-2xl overflow-hidden shadow-2xl bg-[#4a121b] border border-white/10 p-2">
+                  <div className="h-full w-full rounded-2xl overflow-hidden shadow-2xl bg-[#c0011e] border border-white/10 p-2">
                     <Image
                       src={testimonial.src}
                       alt={testimonial.name}

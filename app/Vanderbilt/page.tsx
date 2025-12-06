@@ -4,7 +4,7 @@ import RotatingEarth from "../components/globe/globe";
 
 export default function VanderbiltPage() {
   return (
-    <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8 bg-[#4a121b] relative overflow-hidden">
+    <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-4 sm:px-6 lg:px-8 bg-[#c0011e] relative overflow-hidden">
       {/* Grid background pattern */}
       <div 
         className="absolute inset-0 opacity-[0.05]"

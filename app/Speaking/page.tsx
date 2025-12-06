@@ -47,7 +47,7 @@ export default function SpeakingPage() {
   ], []);
 
   return (
-    <div className="min-h-screen pt-24 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 bg-[#4a121b] relative overflow-hidden">
+    <div className="min-h-screen pt-24 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 bg-[#c0011e] relative overflow-hidden">
       {/* Grid background pattern */}
       <div 
         className="absolute inset-0 opacity-[0.05]"
@@ -78,7 +78,7 @@ export default function SpeakingPage() {
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="group bg-[#2b0a0f]/40 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-[#d4af37]/40 transition-all duration-500 hover:shadow-2xl hover:shadow-[#d4af37]/5 flex flex-col h-full"
+              className="group bg-[#3d0e14]/50 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-[#d4af37]/40 transition-all duration-500 hover:shadow-2xl hover:shadow-[#d4af37]/5 flex flex-col h-full"
             >
               {/* Image Container */}
               <div className="relative w-full aspect-video bg-[#2b0a0f] overflow-hidden">

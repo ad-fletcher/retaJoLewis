@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="bg-[#4a121b] border-t border-white/10"
+      className="bg-[#c0011e] border-t border-white/10"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col items-center gap-8">

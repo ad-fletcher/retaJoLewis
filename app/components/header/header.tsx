@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export default function Header() {
+export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -91,8 +91,8 @@ export default function Header() {
         "fixed inset-x-0 top-0 z-100 transition-colors duration-300" +
         (scrolled || mobileOpen
           ? isMobile && mobileOpen
-            ? " bg-[#4a121b]"
-            : " backdrop-blur supports-backdrop-filter:bg-[#4a121b]/60 bg-[#4a121b]/80"
+            ? " bg-[#c0011e]"
+            : " backdrop-blur supports-backdrop-filter:bg-[#c0011e]/60 bg-[#c0011e]/80"
           : " bg-transparent")
       }
     >
@@ -172,7 +172,7 @@ export default function Header() {
             id="mobile-nav"
             className={
               (mobileOpen ? "block" : "hidden") +
-              " md:hidden absolute inset-x-0 top-full mt-1 z-101 rounded-b-lg border border-white/10 bg-[#4a121b] shadow-lg"
+              " md:hidden absolute inset-x-0 top-full mt-1 z-101 rounded-b-lg border border-white/10 bg-[#c0011e] shadow-lg"
             }
           >
             <ul className="px-4 py-3 space-y-1">

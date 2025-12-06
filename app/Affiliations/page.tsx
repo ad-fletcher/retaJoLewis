@@ -217,7 +217,7 @@ export default function AffiliationsPage() {
   };
 
   return (
-    <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-3 sm:px-6 lg:px-8 bg-[#4a121b] relative">
+    <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-3 sm:px-6 lg:px-8 bg-[#c0011e] relative">
         {/* Grid background pattern */}
         <div 
         className="absolute inset-0 opacity-[0.05] pointer-events-none"
