@@ -13,7 +13,7 @@ export default function ContactPage() {
                 Press, Speaking, and Advisory Inquiries
               </h2>
               <p className="text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
-                Contact Reta's team using the email below to explore partnership opportunities:{" "}
+                Contact Reta's team using the email below to explore speaking and partnership opportunities:{" "}
                 <a href="mailto:info@retajolewis.com" className="text-white underline break-all sm:break-normal hover:text-gray-200 transition-colors">
                   info@retajolewis.com
                 </a>

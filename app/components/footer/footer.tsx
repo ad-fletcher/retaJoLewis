@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer
       role="contentinfo"
-      className="bg-[#c0011e] border-t border-white/10"
+      className="bg-[#f30126] border-t border-white/10"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col items-center gap-8">
@@ -90,7 +90,7 @@ export default function Footer() {
             </a>
                       {/* Facebook */}
                         <a
-              href="https://www.facebook.com/RetaJoLewis"
+              href="https://www.facebook.com/reta.lewis.505"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"

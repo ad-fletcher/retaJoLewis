@@ -47,7 +47,7 @@ export default function SpeakingPage() {
   ], []);
 
   return (
-    <div className="min-h-screen pt-24 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 bg-[#c0011e] relative overflow-hidden">
+    <div className="min-h-screen pt-24 pb-16 sm:pb-24 px-4 sm:px-6 lg:px-8 bg-[#f30126] relative overflow-hidden">
       {/* Grid background pattern */}
       <div 
         className="absolute inset-0 opacity-[0.05]"
@@ -78,10 +78,10 @@ export default function SpeakingPage() {
               target="_blank"
               rel="noopener noreferrer"
               key={index}
-              className="group bg-[#3d0e14]/50 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:border-[#d4af37]/40 transition-all duration-500 hover:shadow-2xl hover:shadow-[#d4af37]/5 flex flex-col h-full"
+              className="group bg-white backdrop-blur-md rounded-2xl overflow-hidden border border-black/10 hover:border-[#d4af37]/40 transition-all duration-500 hover:shadow-2xl hover:shadow-[#d4af37]/5 flex flex-col h-full"
             >
               {/* Image Container */}
-              <div className="relative w-full aspect-video bg-[#2b0a0f] overflow-hidden">
+              <div className="relative w-full aspect-video bg-gray-100 overflow-hidden">
                 <Image
                   src={testimonial.src}
                   alt={testimonial.title}
@@ -106,12 +106,12 @@ export default function SpeakingPage() {
                   <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-[#d4af37] border border-[#d4af37]/30 rounded-full uppercase bg-[#d4af37]/5 mb-3">
                     {testimonial.name}
                   </span>
-                  <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2 font-serif leading-tight group-hover:text-[#d4af37] transition-colors duration-300">
+                  <h3 className="text-2xl sm:text-3xl font-bold text-black mb-2 font-serif leading-tight group-hover:text-[#d4af37] transition-colors duration-300">
                     {testimonial.title}
                   </h3>
                 </div>
                 
-                <p className="text-base text-gray-300 mb-8 line-clamp-3 leading-relaxed font-light">
+                <p className="text-base text-gray-800 mb-8 line-clamp-3 leading-relaxed font-light">
                   {testimonial.description}
                 </p>
                 

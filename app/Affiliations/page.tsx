@@ -20,9 +20,9 @@ type Education = {
 export default function AffiliationsPage() {
   const currentAffiliations = useMemo<Affiliation[]>(() => [
     {
-      role: "Board Member",
-      organization: "Rare Earth Americas",
-      description: "Rare Earth Americas is a company focused on developing and securing critical rare earth mineral resources essential for modern technology, clean energy, and national security. The organization works to establish a sustainable and secure supply chain for rare earth elements in the Americas.",
+      role: "Non-Executive Director",
+      organization: "Rare Earths Americas",
+      description: "Rare Earths Americas is a company focused on developing and securing critical rare earth mineral resources essential for modern technology, clean energy, and national security. The organization works to establish a sustainable and secure supply chain for rare earth elements in the Americas.",
       logo: "/rareEarthAmericas.png",
     },
      {
@@ -30,6 +30,12 @@ export default function AffiliationsPage() {
       organization: "World Economic Forum",
       description: "The World Economic Forum (WEF) is the international organization for Public-Private Cooperation. It provides a global, impartial and not-for-profit platform for meaningful connection between stakeholders to establish trust and build initiatives for cooperation and progress.",
       logo: "/wef.png",
+    },
+    {
+      role: "Keynote Speaker",
+      organization: "Leading Authorities, Inc.",
+      description: "The Leading Authority, Inc. is Washington, D.C. top speakers bureau for sourcing and securing incredible keynote speakers, moderators and more for any type of meeting and for any audience.",
+      logo: "/leadingauthorities.png",
     },
 
     {
@@ -40,10 +46,10 @@ export default function AffiliationsPage() {
     },
 
     {
-      role: "Keynote Speaker",
-      organization: "Leading Authorities, Inc.",
-      description: "The Leading Authority, Inc. is Washington, D.C. top speakers bureau for sourcing and securing incredible keynote speakers, moderators and more for any type of meeting and for any audience.",
-      logo: "/leadingauthorities.png",
+      role: "Board Services - Board Candidate",
+      organization: "New York Stock Exchange",
+      description: "The New York Stock Exchange launched NYSE Board Services in 2019 to support NYSE-listed companies by providing access to a pool of highly qualified board candidates. NYSE Board Services is built around three key pillars: Curated Board Searches, Candidate Network, and CEO Advisory Council. Engaged in strategic discussions and networking to boost board readiness. Selected and vetted by NYSE Board Services Candidate Network for the prestigious program.",
+      logo: "/nyseLogo.jpeg",
     },
     {
       role: "Member of Advisory Board and Advisory Committee Economic Projects",
@@ -52,11 +58,12 @@ export default function AffiliationsPage() {
       logo: "/americanLeadershipInitiative.webp",
     },
     {
-      role: "Member",
+      role: "Leadership Council Member",
       organization: "Leadership Council on Women in National Security",
       description: "The Leadership Council on Women in National Security (LCWINS) is a nonprofit 501(c)3 organization committed to advancing gender parity in national security and foreign policy decision-making.",
       logo: "/lcw.png",
     },
+
     {
       role: "Member",
       organization: "Ellis Island Medals of Honor Advisory Committee",
@@ -70,23 +77,12 @@ export default function AffiliationsPage() {
       logo: "/blueStarFamilies.png",
     },
     {
-      role: "Board Member",
-      organization: "New York Stock Exchange",
-      description: "The New York Stock Exchange (NYSE) is the world's largest stock exchange by market capitalization, providing a platform for companies to raise capital and for investors to trade securities. As a board member, Reta Jo Lewis contributes to strategic governance and oversight of the exchange's operations and policies.",
-      logo: "/nyseLogo.jpeg",
-    },
-    {
-      role: "Steering Committee",
+      role: "Co-Chair",
       organization: "Global Power Women's Network",
       description: "The Global Power Women's Network is dedicated to empowering female leaders by providing a platform for mentorship, knowledge-sharing, and professional development. Through specialized discussions, networking opportunities, and initiatives, the network supports women in navigating leadership challenges, driving innovation, and shaping the future of their industries.",
       logo: "/globalPowerWomen.png",
     },
-    {
-      role: "Member",
-      organization: "Executive Women in Government",
-      description: "Executive Women in Government (EWG) is a nonpartisan, nonprofit organization founded in 1973 to support and advance women leaders in the federal government. As a member, Reta Jo Lewis participates in a network that provides mentoring, professional development, and advocacy to increase the presence and influence of women at the highest levels of public service.",
-      logo: "/executiveWomenGov.png",
-    },
+
 
   ], []);
 
@@ -105,7 +101,7 @@ export default function AffiliationsPage() {
       logo: "/gmf.jpg",
     },
     {
-      role: "Board Member",
+      role: "African American Advisory Council Member",
       organization: "Nielsen",
       description: "Nielsen is a global data, measurement, and analytics company that provides independent insights into audience behavior across television, digital, audio, and retail platforms. Its products and services help media companies, advertisers, and brands understand consumer preferences, evaluate performance, and make data-driven decisions in markets worldwide.",
       logo: "/nielsen.png",
@@ -150,11 +146,11 @@ export default function AffiliationsPage() {
     return (
       <div
         key={index}
-        className="flex flex-col sm:flex-row gap-6 sm:gap-8 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-12 border-b border-white/10 last:border-b-0"
+        className="flex flex-col sm:flex-row gap-6 sm:gap-8 p-6 sm:p-8 md:p-10 bg-white rounded-2xl shadow-xl transition-all hover:shadow-2xl"
       >
         {affiliation.logo && (
           <div className="shrink-0 flex items-center justify-center sm:justify-start sm:self-start mx-auto sm:mx-0">
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-xl p-4 shadow-lg flex items-center justify-center">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 bg-gray-50 rounded-xl p-4 shadow-sm flex items-center justify-center border border-gray-100">
               <Image
                 src={affiliation.logo}
                 alt={affiliation.organization}
@@ -167,13 +163,13 @@ export default function AffiliationsPage() {
           </div>
         )}
         <div className="flex-1 prose prose-sm sm:prose-base md:prose-lg max-w-none">
-          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif font-medium mb-1 sm:mb-2 text-[#d4af37]">
+          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif font-medium mb-1 sm:mb-2 text-gray-700">
             {affiliation.role}
           </h3>
-          <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 text-white">
+          <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 text-black">
             {affiliation.organization}
           </h4>
-          <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
             {affiliation.description}
           </p>
         </div>
@@ -185,11 +181,11 @@ export default function AffiliationsPage() {
     return (
       <div
         key={index}
-        className="flex flex-col sm:flex-row gap-6 sm:gap-8 pt-6 sm:pt-8 md:pt-10 pb-8 sm:pb-10 md:pb-12 border-b border-white/10 last:border-b-0"
+        className="flex flex-col sm:flex-row gap-6 sm:gap-8 p-6 sm:p-8 md:p-10 bg-white rounded-2xl shadow-xl transition-all hover:shadow-2xl"
       >
         {edu.logo && (
           <div className="shrink-0 flex items-center justify-center sm:justify-start sm:self-start mx-auto sm:mx-0">
-            <div className="relative w-32 h-32 sm:w-40 sm:h-40 bg-white rounded-xl p-4 shadow-lg flex items-center justify-center">
+            <div className="relative w-32 h-32 sm:w-40 sm:h-40 bg-gray-50 rounded-xl p-4 shadow-sm flex items-center justify-center border border-gray-100">
               <Image
                 src={edu.logo}
                 alt={edu.institution}
@@ -202,13 +198,13 @@ export default function AffiliationsPage() {
           </div>
         )}
         <div className="flex-1 prose prose-sm sm:prose-base md:prose-lg max-w-none">
-          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif font-medium mb-1 sm:mb-2 text-[#d4af37]">
+          <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-serif font-medium mb-1 sm:mb-2 text-gray-700">
             {edu.degree}
           </h3>
-          <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 text-white">
+          <h4 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-3 sm:mb-4 md:mb-5 text-black">
             {edu.institution}
           </h4>
-          <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-gray-600 leading-relaxed">
             {edu.years}
           </p>
         </div>
@@ -217,7 +213,7 @@ export default function AffiliationsPage() {
   };
 
   return (
-    <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-3 sm:px-6 lg:px-8 bg-[#c0011e] relative">
+    <div className="min-h-screen pt-16 pb-8 sm:pb-12 px-3 sm:px-6 lg:px-8 bg-[#f30126] relative">
         {/* Grid background pattern */}
         <div 
         className="absolute inset-0 opacity-[0.05] pointer-events-none"
@@ -236,7 +232,7 @@ export default function AffiliationsPage() {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-serif font-bold mb-2 sm:mb-3 md:mb-4 text-white">
               Reta Jo Lewis
             </h1>
-            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-medium mb-4 sm:mb-6 md:mb-8 text-[#d4af37]">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-medium mb-4 sm:mb-6 md:mb-8 text-white">
               Affiliations
             </h2>
           </div>
@@ -246,7 +242,7 @@ export default function AffiliationsPage() {
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-[#d4af37]/30 text-white">
               Current Affiliations
             </h2>
-            <div className="space-y-0">
+            <div className="space-y-6 sm:space-y-8">
               {currentAffiliations.map((affiliation, index) => renderAffiliationCard(affiliation, index))}
             </div>
           </section>
@@ -256,7 +252,7 @@ export default function AffiliationsPage() {
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-[#d4af37]/30 text-white">
               Past Affiliations
             </h2>
-            <div className="space-y-0">
+            <div className="space-y-6 sm:space-y-8">
               {pastAffiliations.map((affiliation, index) => renderAffiliationCard(affiliation, index))}
             </div>
           </section>
@@ -266,7 +262,7 @@ export default function AffiliationsPage() {
             <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold mb-4 sm:mb-6 md:mb-8 pb-2 sm:pb-3 md:pb-4 border-b border-[#d4af37]/30 text-white">
               Education
             </h2>
-            <div className="space-y-0">
+            <div className="space-y-6 sm:space-y-8">
               {education.map((edu, index) => renderEducationCard(edu, index))}
             </div>
           </section>
