@@ -1,12 +1,9 @@
 .root {
-  /* Local fallback for logo fills */
-  --color-gray12: hsl(0 0% 9%);
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   place-items: center;
-  /* Shrink height on small screens, cap at original */
-  min-height: clamp(96px, 36vw, 136px);
+  min-height: clamp(80px, 30vw, 120px);
   position: relative;
   width: 100%;
 }
@@ -21,22 +18,26 @@
 }
 
 .logo {
-  --duration: 500ms;
-  --curve: ease;
+  --duration: 700ms;
+  --curve: cubic-bezier(0.21, 0.47, 0.32, 0.98);
   display: flex;
   align-items: center;
   justify-content: center;
   
-  /* White card styling */
-  background-color: white;
-  border-radius: 12px;
-  padding: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Transparent/Minimalist styling */
+  background-color: transparent;
+  /* Optional: slightly grayscale images if desired */
+  filter: grayscale(100%); 
+  transition: filter 0.3s ease;
   
   /* Aspect ratio control */
-  aspect-ratio: 1/1;
-  width: clamp(96px, 22vw, 160px);
-  height: clamp(96px, 22vw, 160px);
+  aspect-ratio: 3/2;
+  width: clamp(100px, 20vw, 180px);
+  height: auto;
+
+  &:hover {
+    filter: grayscale(0%);
+  }
 
   svg,
   img {
@@ -68,38 +69,22 @@
 
 @keyframes enter {
   0% {
-    translate: 0 40px;
-    filter: blur(4px);
     opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-    translate: 0 0;
-    filter: blur(0px);
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes exit {
   0% {
-    translate: 0 0;
-    filter: blur(0px);
     opacity: 1;
+    transform: translateY(0);
   }
   100% {
-    translate: 0 -40px;
-    filter: blur(4px);
     opacity: 0;
-  }
-}
-
-@keyframes grow {
-  0% {
-    scale: 1;
-  }
-  50% {
-    scale: 1.5;
-  }
-  100% {
-    scale: 1;
+    transform: translateY(-20px);
   }
 }

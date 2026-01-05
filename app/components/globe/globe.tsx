@@ -116,10 +116,6 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
         }
       }
 
-      console.log(
-        `Generated ${pointsGenerated} points for land feature:`,
-        feature.properties?.featurecla || "Land",
-      )
       return dots
     }
 
@@ -139,21 +135,23 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
       const currentScale = projection.scale()
       const scaleFactor = currentScale / radius
 
-      // Draw ocean (globe background) - transparent with subtle border
+      // Draw ocean (globe background) - transparent
       context.beginPath()
       context.arc(containerWidth / 2, containerHeight / 2, currentScale, 0, 2 * Math.PI)
-      context.fillStyle = "rgba(114, 14, 30, 0.1)" // Dark red tint, very transparent
+      context.fillStyle = "rgba(255, 255, 255, 0.05)" // Very subtle white fill
       context.fill()
-      context.strokeStyle = "rgba(212, 175, 55, 0.3)" // Gold border, transparent
-      context.lineWidth = 1 * scaleFactor
-      context.stroke()
+      
+      // Removed the gold border to make it cleaner on white
+      // context.strokeStyle = "rgba(212, 175, 55, 0.3)" 
+      // context.lineWidth = 1 * scaleFactor
+      // context.stroke()
 
       if (landFeatures) {
         // Draw graticule
         const graticule = d3.geoGraticule()
         context.beginPath()
         path(graticule())
-        context.strokeStyle = "rgba(255, 255, 255, 0.1)" // White grid, very subtle
+        context.strokeStyle = "rgba(0, 0, 0, 0.05)" // Subtle dark gray grid for white bg
         context.lineWidth = 0.5 * scaleFactor
         context.globalAlpha = 0.3
         context.stroke()
@@ -164,7 +162,7 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
         landFeatures.features.forEach((feature: any) => {
           path(feature)
         })
-        context.strokeStyle = "rgba(255, 255, 255, 0.2)" // White outlines
+        context.strokeStyle = "rgba(0, 0, 0, 0.1)" // Darker gray outlines
         context.lineWidth = 0.5 * scaleFactor
         context.stroke()
 
@@ -207,8 +205,6 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
             totalDots++
           })
         })
-
-        console.log(`Total dots generated: ${totalDots} across ${landFeatures.features.length} land features`)
 
         render()
         setIsLoading(false)
@@ -266,4 +262,3 @@ export default function RotatingEarth({ width = 800, height = 600, className = "
     </div>
   )
 }
-

@@ -92,11 +92,12 @@
     var(--shadow-border), 0px 1px 1px rgba(0, 0, 0, 0.02),
     0px 8px 16px -4px rgba(0, 0, 0, 0.04),
     0px 24px 32px -8px rgba(0, 0, 0, 0.06);
-  --color-orange: #720e1e;
-  --color-red: #9e1b32;
-  --color-orange-bg: #720e1e1a;
-  --color-orange-bg2: #720e1e95;
-  --color-orange-bg3: #720e1e26;
+  --color-orange: #d4af37;
+  --color-red: #1a1a1a;
+  --color-gold: #d4af37;
+  --color-orange-bg: #d4af371a;
+  --color-orange-bg2: #d4af3795;
+  --color-orange-bg3: #d4af3726;
   --color-yellow: #d4af37;
   --color-blue: #0070f3;
   --color-code-block-bg: #fff;
@@ -368,12 +369,13 @@
 @supports (color: color(display-p3 1 1 1)) {
   /* stylelint-disable-next-line at-rule-no-unknown */
   @theme {
-    --color-yellow: color(display-p3 0.99 0.8 0.14);
-    --color-orange: color(display-p3 0.99 0.4 0.02);
-    --color-orange-bg: color(display-p3 0.99 0.4 0.02 / 0.06);
-    --color-orange-bg2: color(display-p3 0.99 0.4 0.02 / 0.55);
-    --color-orange-bg3: color(display-p3 0.99 0.4 0.02 / 0.1);
-    --color-red: color(display-p3 1 0.28 0.3);
+    --color-yellow: color(display-p3 0.83 0.69 0.22);
+    --color-orange: color(display-p3 0.83 0.69 0.22);
+    --color-gold: color(display-p3 0.83 0.69 0.22);
+    --color-orange-bg: color(display-p3 0.83 0.69 0.22 / 0.06);
+    --color-orange-bg2: color(display-p3 0.83 0.69 0.22 / 0.55);
+    --color-orange-bg3: color(display-p3 0.83 0.69 0.22 / 0.1);
+    --color-red: color(display-p3 0.1 0.1 0.1);
     --color-green: color(display-p3 0.16 0.81 0.49);
     --color-blue: color(display-p3 0.07 0.48 1);
     --color-purple: color(display-p3 0.71 0.52 1);
