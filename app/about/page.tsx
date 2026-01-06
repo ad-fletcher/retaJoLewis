@@ -202,7 +202,7 @@ export default function AboutPage() {
                   </h1>
                   <div className="w-24 h-1 bg-[#d4af37] mb-4"></div>
                   <p className="text-lg md:text-xl font-serif text-[#720e1e] leading-relaxed">
-                    Civic and Business Leader | Former President & Chair of the Export-Import Bank
+                    Board Member, Strategic Advisor, Speaker | Former President, Chairman and CEO of Export-Import Bank (2022-2025)
                   </p>
                </div>
 

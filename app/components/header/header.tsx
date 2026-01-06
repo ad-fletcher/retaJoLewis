@@ -66,8 +66,7 @@ export function Header() {
             <div className="flex items-center w-full max-w-2xl gap-4">
                <div className="h-px bg-[#d4af37] flex-1 hidden md:block"></div>
                <p className="text-[9px] sm:text-[10px] md:text-xs font-semibold tracking-[0.15em] sm:tracking-[0.2em] text-gray-900 uppercase text-center leading-relaxed px-2 md:px-0">
-               Advancing U.S. economic competitiveness, trade, and global investment through visionary policy leadership and strategic international insights.
-               </p>
+               Advancing U.S. economic competitiveness, trade, and global investment through visionary policy leadership.               </p>
                <div className="h-px bg-[#d4af37] flex-1 hidden md:block"></div>
             </div>
           </div>

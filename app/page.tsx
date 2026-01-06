@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="bg-white min-h-screen">
 
-
+      <Hero />
       <div className="relative z-10 bg-white">
         {/* About Section */}
         <About />

@@ -12,7 +12,7 @@ export default function ContactPage() {
           <FadeIn direction="up" className="relative order-1 md:order-1">
             <div className="relative w-full max-w-md mx-auto overflow-hidden">
               <Image
-                src="/reta.png"
+                src="/retaConnect.png"
                 alt="Reta Jo Lewis"
                 width={500}
                 height={600}
@@ -31,12 +31,12 @@ export default function ContactPage() {
               </h1>
               <div className="w-24 h-1 bg-[#d4af37] mb-6" />
               <h2 className="text-xs font-bold tracking-[0.2em] text-gray-900 uppercase mb-6">
-                Press, Speaking, and Advisory Inquiries
+                Speaking, Advisory Inquiries, Press
               </h2>
               
               <div className="text-gray-600 font-light leading-relaxed space-y-4">
                 <p>
-                  Contact Reta's team using the email below to explore speaking and partnership opportunities:{" "}
+                  Contact Reta Jo's team using the email below to explore speaking and partnership opportunities:{" "}
                   <a href="mailto:info@retajolewis.com" className="text-[#720e1e] hover:text-[#d4af37] transition-colors underline">
                     info@retajolewis.com
                   </a>

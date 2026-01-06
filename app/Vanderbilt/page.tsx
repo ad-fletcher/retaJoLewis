@@ -10,8 +10,12 @@ export default function VanderbiltPage() {
       description: "Legal and strategic guidance on cross-border investments in Africa, the Caribbean, Europe, and the Middle East. Project finance structuring, M&A, infrastructure development, and export credit financing expertise.",
     },
     {
+      title: "U.S. Government Relations",
+      description: "Advisory on relationships with U.S. institutions including EXIM, DFC, and Commerce. Navigation of trade finance programs and government contracting.",
+    },
+    {
       title: "Corporate Transactional Advice",
-      description: "Renowned energy development and finance transaction advisors with decades of experience in large-scale infrastructure, hydrocarbons, mining ventures, and public-private partnerships.",
+      description: "Energy development and finance transaction advisors with decades of experience in large-scale infrastructure, hydrocarbons, mining ventures, and public-private partnerships.",
     },
     {
       title: "Sovereign & Institutional Counsel",
@@ -20,10 +24,6 @@ export default function VanderbiltPage() {
     {
       title: "Policy Advocacy & Diplomacy",
       description: "Design and execution of advocacy campaigns for market access. High-level diplomatic interfacing and convening stakeholder dialogues and investment forums.",
-    },
-    {
-      title: "U.S. Government Relations",
-      description: "Advisory on relationships with U.S. institutions including EXIM, DFC, and Commerce. Navigation of trade finance programs and government contracting.",
     },
     {
       title: "State & Local Government",

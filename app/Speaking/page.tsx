@@ -23,24 +23,10 @@ export default function SpeakingPage() {
       url: "https://www.youtube.com/watch?v=5dXedW5OEjE"
     },
     {
-      source: "EXIM President & Chair Final Remarks",
-      headline: "Farewell Message to EXIM Customers and Partners",
-      description: "Farewell remarks reflecting on her tenure as EXIM Chair during the Biden-Harris administration. Lewis thanks EXIM customers and partners for supporting American workers and expresses gratitude for the team's dedication in supporting U.S. exporters globally.",
-      src: "/speaking/exim-final-remarks.png",
-      url: "https://www.youtube.com/watch?v=onVHsaG9anE"
-    },
-    {
-      source: "The Minority Leaders Podcast",
-      headline: "Diversity, Mentorship, and Women's Leadership",
-      description: "A podcast interview discussing diversity in foreign policy and national security, DC Fellowship opportunities, and mentorship. Lewis shares her perspective as a mentor and co-chair of Women of Color for Biden-Harris, emphasizing how women strengthen diplomatic corps.",
-      src: "/speaking/minorityLeaders.jpg",
-      url: "https://podcast.algenesajery.com/a-conversation-with-reta-jo-lewis-german-marshall-fund-of-the-united-states/"
-    },
-    {
       source: "University of Detroit Mercy Fireside Chat",
       headline: "Responsible Investing and Global Trade Leadership",
       description: "A fireside chat at the University of Detroit Mercy discussing responsible investing and global trade. Lewis shares insights on how EXIM financing can drive sustainable development and discusses her leadership journey as a woman in finance and diplomacy.",
-      src: "/speaking/charlton.jpg",
+      src: "/retaUSA.png",
       url: "https://www.youtube.com/watch?v=lVtLvuXDwtE"
     },
   ], []);

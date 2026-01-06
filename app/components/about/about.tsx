@@ -33,16 +33,13 @@ export default function About() {
           
           {/* Subtitle */}
           <p className="text-lg md:text-xl font-serif text-[#720e1e] leading-relaxed">
-            Civic and Business Leader | Former President & Chair of the Export-Import Bank
+            Board Member, Strategic Advisor, Speaker  | Former President, Chairman and CEO of Export-Import Bank (2022-2025)
           </p>
           
           {/* Body Text */}
           <div className="text-gray-700 font-light leading-relaxed space-y-4 text-base">
             <p>
-              Reta Jo Lewis is a civic leader, attorney, and former President & Chair of the Export-Import Bank of the United States. A Harvard-trained executive, she brings more than three decades of experience spanning government, business, and philanthropy—advancing cross-sector partnerships that drive economic development, sustainability, and equity.
-            </p>
-            <p>
-              As the first African American and only the second woman to lead EXIM, she oversaw a $135 billion portfolio and expanded the agency's global reach to nearly 180 countries, championing American competitiveness and inclusive economic growth.
+              Reta Jo Lewis is a senior strategic advisor, lawyer, and former U.S. government leader with more than 30 years of experience guiding executives and boards at the intersection of global markets, geopolitical risk, and economic security. She most recently served as Chairman, President, and CEO of the Export-Import Bank of the United States, where she helped align U.S. export finance and supply-chain strategy with national security and competitiveness objectives during a period of heightened global uncertainty. Across leadership roles in government, finance, and international policy, Lewis has advised organizations on navigating regulatory and geopolitical complexity, strengthening resilience, and building effective public-private partnerships. She is widely sought after for her ability to translate global risk into actionable strategy for decision-makers operating in complex, cross-border environments.
             </p>
           </div>
         </FadeIn>
