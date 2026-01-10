@@ -8,31 +8,17 @@ import { FadeIn } from "../ui/fade-in";
 export function Speak() {
   const testimonials = useMemo(() => [
     {
-      description: "A 30-minute conversation on EXIM's Supply Chain Resiliency Initiative.",
+      description: "A 30-minute conversation on EXIM's Supply Chain Resiliency Initiative and efforts to strengthen U.S. supply chains by reducing reliance on China for critical minerals.",
       name: "CSIS Economic Security Event",
       title: "Securing America's Economic Future",
       src: "/speaking/csis.jpg",
       videoUrl: "https://www.youtube.com/watch?v=5dXedW5OEjE"
     },
     {
-      description: "Farewell remarks reflecting on her tenure as EXIM Chair.",
-      name: "EXIM President & Chair Final Remarks",
-      title: "Farewell Message to EXIM Customers",
-      src: "/speaking/exim-final-remarks.png",
-      videoUrl: "https://www.youtube.com/watch?v=onVHsaG9anE"
-    },
-    {
-      description: "Podcast on diversity in foreign policy and national security.",
-      name: "The Minority Leaders Podcast",
-      title: "Diversity, Mentorship, and Leadership",
-      src: "/speaking/minorityLeaders.jpg",
-      videoUrl: "https://podcast.algenesajery.com/a-conversation-with-reta-jo-lewis-german-marshall-fund-of-the-united-states/"
-    },
-    {
-      description: "Fireside chat on responsible investing and global trade.",
-      name: "University of Detroit Mercy",
-      title: "Responsible Investing and Global Trade",
-      src: "/speaking/charlton.jpg",
+      description: "A fireside chat at the University of Detroit Mercy discussing responsible investing and global trade. Lewis shares insights on how EXIM financing can drive sustainable development.",
+      name: "University of Detroit Mercy Fireside Chat",
+      title: "Responsible Investing and Global Trade Leadership",
+      src: "/retaUSA.png",
       videoUrl: "https://www.youtube.com/watch?v=lVtLvuXDwtE"
     }
   ], []);
